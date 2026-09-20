@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e12;--card:#17171d;--soft:#24242d;--pink:#ff7fa8;--gold:#f7c873;--text:#fff8fb;--muted:#bdb7bd}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 20% 10%,#2a1621 0,transparent 32%),radial-gradient(circle at 85% 30%,#292014 0,transparent 30%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.container{width:min(1080px,92%);margin:auto}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(14,14,18,.72);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.08)}
+.navin{height:66px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:700;letter-spacing:.5px}.logo span{color:var(--pink)}
+nav a{font-size:13px;color:#ddd;margin-left:18px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:110px 0 70px;position:relative}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,127,168,.13);filter:blur(65px);animation:pulse 5s infinite alternate}
+@keyframes pulse{to{transform:scale(1.2);opacity:.65}}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+h1{font-family:"Playfair Display",serif;font-size:clamp(48px,9vw,96px);line-height:.95;margin:18px 0}
+.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:9px;margin-top:28px;background:linear-gradient(135deg,var(--pink),#ff9e9e);color:#241018;padding:14px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;box-shadow:0 10px 35px rgba(255,127,168,.2)}
+section{padding:90px 0}.section-title{font-family:"Playfair Display",serif;font-size:42px;margin:0 0 12px}.section-sub{color:var(--muted);line-height:1.7;max-width:650px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.card{background:rgba(23,23,29,.86);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.profile{min-height:390px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.8)),url("media/trainer-photo.jpg") center/cover;border-radius:28px;padding:28px;border:1px solid rgba(255,255,255,.08)}
+.profile small{color:var(--gold);font-weight:700;letter-spacing:2px}.profile h3{font-family:"Playfair Display",serif;font-size:34px;margin:8px 0}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.tag{background:var(--soft);padding:8px 12px;border-radius:999px;color:#ddd;font-size:13px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.tile{height:260px;border-radius:22px;overflow:hidden;background:#1c1c23;border:1px solid rgba(255,255,255,.07);position:relative}.tile img,.tile video{width:100%;height:100%;object-fit:cover;display:block}.tile .caption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-weight:600}
+.inbox-wrap{text-align:center}.inbox{width:min(430px,90%);margin:35px auto 0;cursor:pointer;transition:.35s}.inbox:hover{transform:translateY(-7px) rotate(-1deg)}.envelope{height:260px;background:#f7d6df;border-radius:20px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);overflow:hidden}.flap{position:absolute;inset:0;background:#f0b8c9;clip-path:polygon(0 0,100% 0,50% 57%)}.seal{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#b93661;color:#fff;border:5px solid #f7d6df;font-size:25px}.inbox-label{margin-top:16px;color:#f7d6df;font-weight:700}
+.letter-overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);display:none;place-items:center;z-index:50;padding:20px}.letter-overlay.open{display:grid}.letter{background:#fff9f0;color:#352b2e;width:min(650px,96%);max-height:88vh;overflow:auto;border-radius:12px;padding:42px 34px;box-shadow:0 30px 100px #000;font-family:Georgia,serif;position:relative}.letter h2{font-family:"Playfair Display",serif;color:#a5365b;font-size:38px;margin:0 0 20px}.letter p{font-size:17px;line-height:1.85}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:28px;cursor:pointer;color:#7d5b65}
+.music{position:fixed;right:18px;bottom:18px;z-index:30}.music button{border:1px solid rgba(255,255,255,.12);background:rgba(23,23,29,.9);color:white;border-radius:999px;padding:12px 16px;cursor:pointer;backdrop-filter:blur(10px)}
+footer{text-align:center;color:#8e898e;padding:40px 0 65px;border-top:1px solid rgba(255,255,255,.06)}
+.gift{margin-top:16px;font-size:88px;cursor:pointer;display:inline-block;animation:giftBounce 1.8s ease-in-out infinite}
+@keyframes giftBounce{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
+.gift-label{margin-top:14px;color:var(--gold);font-size:17px;font-weight:700;letter-spacing:.5px}
+.gift-overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(8px);display:none;place-items:center;z-index:60;padding:20px}
+.gift-overlay.open{display:grid}
+.gift-popup{background:linear-gradient(160deg,#2a1621,#17171d);border:1px solid rgba(255,127,168,.3);border-radius:26px;padding:50px 34px;text-align:center;width:min(420px,92%);box-shadow:0 30px 100px #000;position:relative}
+.gift-popup h2{font-family:"Playfair Display",serif;color:#fff8fb;font-size:34px;margin:6px 0}
+.gift-popup p{color:var(--muted);font-size:15px;margin:0}
+.gift-hearts{font-size:32px;letter-spacing:6px}
+.gift-close{position:absolute;right:14px;top:10px;border:0;background:none;font-size:26px;cursor:pointer;color:#bdb7bd}
+.floating-heart{position:fixed;pointer-events:none;z-index:100;animation:heartUp 2.6s ease-in forwards}
+@keyframes heartUp{0%{transform:translateY(0) scale(.6);opacity:1}100%{transform:translateY(-70vh) scale(1.3);opacity:0}}
+.confetti{position:fixed;pointer-events:none;z-index:100;font-size:20px;animation:fall 2.7s linear forwards}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(700deg);opacity:0}}
+@media(max-width:750px){.about{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.tile{height:210px}.navlinks{display:none}.section-title{font-size:35px}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}.tile{height:280px}.letter{padding:34px 22px}.hero p{font-size:15px}}
+</style>
+</head>
+<body>
+<nav><div class="container navin"><div class="logo">For <span id="navName">My Special One</span> ♡</div><div class="navlinks"><a href="#about">About Him</a><a href="#memories">Memories</a><a href="#letter">Birthday Letter</a></div></div></nav>
+
+<header class="hero">
+<div class="glow"></div><div class="container">
+<div class="kicker">A little birthday surprise</div>
+<h1>Happy Birthday,<br><span id="heroName">My Special One</span> ❤️</h1>
+<p>For the man who motivates people to become stronger, keeps showing up, and somehow makes ordinary moments feel special.</p>
+<button class="btn" onclick="celebrate()">Open your surprise ✨</button>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<div class="kicker">A few words about him</div><h2 class="section-title">Strong outside. Special inside.</h2>
+<div class="about" style="margin-top:28px">
+<div class="profile"><small>THE TRAINER</small><h3 id="profileName">Your Trainer's Name</h3><div class="tags"><span class="tag">💪 Fitness</span><span class="tag">🔥 Discipline</span><span class="tag">❤️ Kind heart</span></div></div>
+<div class="card"><h3 style="font-family:'Playfair Display',serif;font-size:30px">Why he is special</h3>
+<p style="color:var(--muted);line-height:1.9">He is the kind of person who pushes others to believe in themselves. He has this genuine, calm personality that just draws people in without even trying.</p>
+<p style="color:var(--muted);line-height:1.9">And underneath all that calm? He's actually the cutest little angry bird once you get to know him. ❤️</p>
+</div></div>
+</div></section>
+
+<section id="memories"><div class="container">
+<div class="kicker">Our little gallery</div><h2 class="section-title">Moments worth keeping 📸</h2>
+<div class="gallery">
+<div class="tile"><img src="media/photo1.jpg" alt="Memory 1" onerror="this.style.display='none'"><div class="caption">One of my favourite memories ❤️</div></div>
+<div class="tile"><img src="media/photo2.jpg" alt="Memory 2" onerror="this.style.display='none'"><div class="caption">That smile ✨</div></div>
+<div class="tile"><img src="media/photo3.jpg" alt="Memory 3" onerror="this.style.display='none'"><div class="caption">A moment to remember</div></div>
+<div class="tile"><img src="media/photo4.jpg" alt="Memory 4" onerror="this.style.display='none'"><div class="caption">Just us ♡</div></div>
+</div>
+</div></section>
+
+<section id="letter"><div class="container inbox-wrap">
+<div class="kicker">Something from my heart</div><h2 class="section-title">You have one new message 💌</h2>
+<p class="section-sub" style="margin:auto">There is a little letter waiting for you. Click the inbox.</p>
+<div class="inbox" onclick="openLetter()"><div class="envelope"><div class="flap"></div><div class="seal">♥</div></div><div class="inbox-label">OPEN YOUR BIRTHDAY LETTER</div></div>
+</div></section>
+
+<div class="letter-overlay" id="letterOverlay" onclick="closeIfOutside(event)">
+<div class="letter"><button class="close" onclick="closeLetter()">×</button>
+<div style="color:#a5365b;font-weight:bold;letter-spacing:2px;font-size:12px">A LETTER FOR YOU</div>
+<h2>Happy Birthday, <span id="letterName">my special one</span> ❤️</h2>
+<p>Dear you,</p>
+<p>Today is your day, and I just want you to know how special you are to me. You spend so much of your time motivating other people, pushing them to be stronger and better, so today I hope you take a moment to celebrate yourself too.</p>
+<p>I hope this new year of your life brings you happiness, peace, success, good health, and all the things you quietly wish for. Keep chasing your goals, keep that beautiful confidence, and never forget how many people are proud of you.</p>
+<p>And selfishly, I hope I get to be part of many more memories with you—the silly conversations, the laughs, the little moments, and all the beautiful days still waiting for us.</p>
+<p>Happy Birthday once again. Keep smiling, keep shining, and keep being you. ❤️</p>
+<p style="text-align:right;margin-top:30px"><i>With lots of love,<br><b>Someone who thinks you're pretty special ♡</b></i></p>
+</div></div>
+
+<section id="gift-section"><div class="container" style="text-align:center">
+<div class="kicker">One more surprise</div><h2 class="section-title">A little gift for you 🎁</h2>
+<div class="gift" onclick="openGift()">🎁</div>
+<div class="gift-label">Click on this birthday gift</div>
+</div></section>
+
+<div class="music"><button onclick="toggleMusic()" id="musicBtn">🎵 Play birthday music</button><audio id="music" loop><source src="media/birthday-music.mp3" type="audio/mpeg"></audio></div>
+<footer>Made with ❤️ specially for <span id="footerName">you</span>.</footer>
+
+<div class="gift-overlay" id="giftOverlay" onclick="closeIfOutsideGift(event)">
+<div class="gift-popup"><button class="gift-close" onclick="closeGift()">×</button>
+<div class="gift-hearts">💖💗💕</div>
+<h2>Happy Birthday!</h2>
+<p>Wishing you a day as wonderful as you are.</p>
+</div>
+</div>
+
+<script>
+const NAME="My Special One"; // CHANGE THIS NAME
+document.querySelectorAll("#navName,#heroName,#profileName,#letterName,#footerName").forEach(x=>x.textContent=NAME);
+const music=document.getElementById("music"), btn=document.getElementById("musicBtn");
+function toggleMusic(){if(music.paused){music.play().catch(()=>{});btn.textContent="⏸ Pause birthday music"}else{music.pause();btn.textContent="🎵 Play birthday music"}}
+function openLetter(){document.getElementById("letterOverlay").classList.add("open");music.play().catch(()=>{});btn.textContent="⏸ Pause birthday music";confetti()}
+function closeLetter(){document.getElementById("letterOverlay").classList.remove("open")}
+function closeIfOutside(e){if(e.target.id==="letterOverlay")closeLetter()}
+function celebrate(){document.getElementById("letter").scrollIntoView({behavior:"smooth"});music.play().catch(()=>{});btn.textContent="⏸ Pause birthday music";confetti()}
+function confetti(){const chars=["❤️","💖","✨","🎉","💪","🥳","⭐"];for(let i=0;i<35;i++){const s=document.createElement("span");s.className="confetti";s.textContent=chars[Math.floor(Math.random()*chars.length)];s.style.left=Math.random()*100+"vw";s.style.top="-5vh";s.style.animationDelay=Math.random()*1.2+"s";s.style.fontSize=(14+Math.random()*18)+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),4000)}}
+function openGift(){document.getElementById("giftOverlay").classList.add("open");floatingHearts()}
+function closeGift(){document.getElementById("giftOverlay").classList.remove("open")}
+function closeIfOutsideGift(e){if(e.target.id==="giftOverlay")closeGift()}
+function floatingHearts(){const hearts=["❤️","💖","💗","💕","💓"];for(let i=0;i<24;i++){const s=document.createElement("span");s.className="floating-heart";s.textContent=hearts[Math.floor(Math.random()*hearts.length)];s.style.left=Math.random()*100+"vw";s.style.bottom="-5vh";s.style.animationDelay=Math.random()*.8+"s";s.style.fontSize=(16+Math.random()*20)+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),3400)}}
+</script>
+</body>
+</html>
